@@ -2,7 +2,7 @@ import express from "express";
 import cors from 'cors';
 import cookieParser from "cookie-parser";
 // import { EmployeeRouter } from "./Routes/EmployeeRoute.js";
-import { adminRouter } from "./Routes/adminRouter.js";
+import { adminRouter } from "./Routes/AdminRouter.js";
 import Jwt from "jsonwebtoken";
 import path from "path";
 import { fileURLToPath } from 'url';
