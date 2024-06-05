@@ -7,11 +7,12 @@ import Jwt from "jsonwebtoken";
 import path from "path";
 import { fileURLToPath } from 'url';
 import dbConnect from "./utilis/db.js";
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const app = express();
+app.use(express.static(path.join(__dirname, "build")));
 app.use(cors({
     origin: ["http://localhost:3000"],
     methods: ['GET', 'POST', 'PUT', "DELETE"],
