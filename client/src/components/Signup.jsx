@@ -31,6 +31,18 @@ function Copyright(props) {
 }
 
 const defaultTheme = createTheme();
+const axiosInstance = axios.create({
+    baseURL: 'https://breatheesg-project.onrender.com',
+  });
+  
+  // Add an interceptor to set CORS headers before each request
+  axiosInstance.interceptors.request.use((config) => {
+    // Set CORS headers
+    config.headers['Access-Control-Allow-Origin'] = '*'; // You might want to restrict this to your frontend domain in production
+    config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS';
+    config.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization';
+    return config;
+  });
 
 export default function Signup() {
     const [email, setEmail] = useState('');
