@@ -39,7 +39,7 @@ export default function Signup() {
   const navigate = useNavigate();
     const handleSignUp = async () => {
         try {
-          const response = await axios.post('http://localhost:5000/auth/signup', {
+          const response = await axios.post('https://breatheesg-project.onrender.com/auth/signup', {
             email: email,
             password: password
           });

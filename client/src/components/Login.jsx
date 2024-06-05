@@ -44,7 +44,7 @@ export default function Login() {
     e.preventDefault(); // Prevent default form submission
 
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', {
+      const response = await axios.post('https://breatheesg-project.onrender.com/auth/login', {
         email: email,
         password: password
       });
