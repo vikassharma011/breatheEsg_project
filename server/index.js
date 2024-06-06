@@ -14,8 +14,9 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.static(path.join(__dirname, "build")));
 app.use(cors({
-    origin: ["http://localhost:3000"],
-    methods: ['GET', 'POST', 'PUT', "DELETE"],
+    origin: '*', // Adjust according to your needs
+  methods: 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+  allowedHeaders: 'Content-Type, Authorization',
     credentials: true
 }));
 app.use(cookieParser());
