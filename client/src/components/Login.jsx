@@ -52,6 +52,7 @@ export default function Login() {
       // Agar backend se koi data receive karna hai toh yahan handle karen
     //   navigate('/dashboard'); // Redirect to dashboard after successful login
     alert("successfully login");
+    navigate("/dashboard")
     } catch (error) {
       console.error('Error logging in:', error.response.data);
       setError('Invalid credentials. Please try again.'); // Set error message
