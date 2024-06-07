@@ -108,7 +108,7 @@ const Dashboard = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Gym Management System
+            hi breatheESG
           </Typography>
         </Toolbar>
       </AppBar>
